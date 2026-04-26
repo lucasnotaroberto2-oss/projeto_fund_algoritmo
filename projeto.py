@@ -33,8 +33,16 @@ def login_usuario() :
     senha = input("digite sua senha..: ")
     return email,senha
 
-def checagem_sim(usuario_logado) :
-    
+def checagem_login(usuario_logado) :
+    usuarios = criar_lista_usuarios()
+    email, senha = usuario_logado #retorna os valores de email e senha como tuplas do usuario
+    for usuario in usuarios:
+        if usuario["email"] == email and usuario["senha"] == senha:
+            print("Usuário logado! Bem-vindo!")
+            return True
+    print("Usuário não encontrado... tente novamente!")
+    return False
+
 #-------------------------------------------------------------------------------------------
 
 inicio = input("digite 1 para cadastro, 2 para login ou enter para sair..: ")
@@ -43,12 +51,9 @@ if inicio == "1" or inicio == "2":
         usuario_criado = novo_usuario()
         adicionar_usuario(usuario_criado)
         print("usuario criado com sucesso!")
-    usuario_logado = login_usuario()
     while True:
-        if checagem_sim(usuario_logado):
-            print("usuario logado, bem vindo ao programa!")
+        usuario_logado = login_usuario()
+        if checagem_login(usuario_logado):
             break
-        else:
-            print("usuario não encontrado no sistema, tente novamente!")
 else:
     print("obrigado por usar nosso programa!")     
