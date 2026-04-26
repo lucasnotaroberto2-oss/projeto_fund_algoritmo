@@ -1,28 +1,54 @@
-#parte 1 do projeto - definição de interface inicial(login/cadastro)
-x = "-----x-----"
-print(x)
+#parte 1 do projeto - definição de interface inicial(cadastro/login)
+
+#--------cadastro---------------------------------------------------------------------------
+def novo_usuario() :
+    nome = input ("digite seu nome...: ")
+    email = input("digite seu email..: ")
+    senha = input("digite sua senha..: ")
+    usuario = {"nome" : nome,
+               "email" : email,
+               "senha" : senha}
+    return usuario
+
+def criar_lista_usuarios() :
+    arquivo = open("usuarios.txt","r")
+    arquivo.seek(0)
+    conteudo = arquivo.read()
+    arquivo.close()
+    if conteudo == "":
+        return []
+    return eval(conteudo)
+
+def adicionar_usuario(usuario_criado) :
+    usuarios = criar_lista_usuarios()
+    usuarios.append(usuario_criado)
+    arquivo = open("usuarios.txt","w")
+    arquivo.write(str(usuarios))
+    arquivo.close()
+
+#--------login------------------------------------------------------------------------------
+
+def login_usuario() :
+    email = input("digite seu email..: ")
+    senha = input("digite sua senha..: ")
+    return email,senha
+
+def checagem_sim(usuario_logado) :
+    
+#-------------------------------------------------------------------------------------------
+
 inicio = input("digite 1 para cadastro, 2 para login ou enter para sair..: ")
-print(x)
-l = []
 if inicio == "1" or inicio == "2":
     if inicio == "1":
-        nome = input    ("informe seu nome......: ")
-        endereco = input("informe seu endereço..: ")
-        telefone = input("informe seu telefone..: ")
-        email = input   ("informe seu e-mail....: ")
-        senha = input   ("informe sua senha.....: ") 
-        #bloco para adicionar senha e email em um arquivo de texto
-    elif inicio == "2":
-        while True:
-            email = input   ("informe seu e-mail....: ")
-            senha = input   ("informe sua senha.....: ")
-            if email in l and senha in l:
-                #a lista vazia será trocado pelo arquivo de texto correspondente
-                print(x)
-                print("acesso permitido!")
-                break
-            else:
-                print(x)
-                print("acesso negado, tente novamente!")
+        usuario_criado = novo_usuario()
+        adicionar_usuario(usuario_criado)
+        print("usuario criado com sucesso!")
+    usuario_logado = login_usuario()
+    while True:
+        if checagem_sim(usuario_logado):
+            print("usuario logado, bem vindo ao programa!")
+            break
+        else:
+            print("usuario não encontrado no sistema, tente novamente!")
 else:
     print("obrigado por usar nosso programa!")     
