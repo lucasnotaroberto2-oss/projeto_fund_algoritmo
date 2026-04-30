@@ -1,1 +1,2 @@
-[{'nome': 'lucas', 'email': 'lucasnotaroberto2@gmail.com', 'senha': '1234'}, {'nome': 'manu', 'email': 'manuella', 'senha': '1408'}]
+{'nome': 'b', 'email': 'b', 'senha': 'b'}
+{'nome': 'a', 'email': 'a', 'senha': 'a'}
