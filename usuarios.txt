@@ -1,2 +1,3 @@
 {'nome': 'b', 'email': 'b', 'senha': 'b'}
 {'nome': 'a', 'email': 'a', 'senha': 'a'}
+{'nome': 'c', 'email': 'c', 'senha': 'c'}

@@ -37,9 +37,7 @@ def checagem_login() :
         usuario_dict = ast.literal_eval(usuarios[usuario])
         if usuario_dict['email'] == email and usuario_dict['senha'] == senha:
             print("Usuário logado! Bem-vindo!")
-            arquivo = open("filmes_usuarios.txt","w")
             return True
-        
     print("Usuário não encontrado... tente novamente!")
     return False
 
@@ -60,7 +58,10 @@ def procura_filme(filme,f):
         print(f[filme - 1])
     else:
         print("filme invalido!")
+    return f[filme - 1]
 
+def ad_filme_favoritos(filme_achado):
+    
 #-------codigo principal--------------------------------------------------------------------
 
 inicio = input("digite 1 para cadastro, 2 para login ou enter para sair..: ")
@@ -70,14 +71,17 @@ if inicio == "1" or inicio == "2":
         adicionar_usuario(usuario_criado)
         print("usuario criado com sucesso!")
     while True:
-        if checagem_login():
+        if checagem_login() == True:
             break
     while True:
         gerencia = input("digite 1 para pesquisar, 2 para gerenciariamento e 3 para sair..: ")
         if gerencia == "1":
             f = catalogo()
             filme = int(input("digite o numero do filme dentro do nosso catalogo(1 a 30)..: "))
-            procura_filme(filme,f)
+            filme_achado = procura_filme(filme,f)
+            x = input("digite 1 para adicionar filme aos favoritos ou enter para sair..: ")
+            if x == "1":
+                ad_filme_favoritos(filme_achado)
         elif gerencia == "3":
             print("obrigado por usar nosso programa!")
             break
