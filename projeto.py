@@ -60,8 +60,43 @@ def procura_filme(filme,f):
         print("filme invalido!")
     return f[filme - 1]
 
-def ad_filme_favoritos(filme_achado):
-    
+def criar_filme_favoritos():
+    fil = []
+    arquivo = open("lista_favoritos.txt","r")
+    for i in arquivo.readlines():
+        fil.append(i)
+    arquivo.close()
+    return fil
+
+def ad_filme_lista(filme_achado):
+    film = criar_filme_favoritos()
+    film.append(filme_achado)
+    arquivo = open("lista_favoritos.txt","w")
+    for i in film:
+        arquivo.write(f"{i}")
+    print("filme adicionado!")
+    arquivo.close()
+
+#-------gerenciamento da lista de favoritos-------------------------------------------------
+
+def catalogo_lista_favoritos():
+    arquivo = open("lista_favoritos.txt","r")
+    for i in arquivo.readlines():
+        print(f"{i}\n")
+    arquivo.close()
+    return
+
+#terminar depois
+def exclusao_filmes(filme_excluido):
+    ex = catalogo_lista_favoritos()
+    for i in range(ex):
+        if i == filme_excluido:
+            del ex[filme_excluido - 1]
+    arquivo = open("lista_favoritos.txt","w")
+    arquivo.write(ex)
+    arquivo.close()
+    return
+
 #-------codigo principal--------------------------------------------------------------------
 
 inicio = input("digite 1 para cadastro, 2 para login ou enter para sair..: ")
@@ -81,9 +116,20 @@ if inicio == "1" or inicio == "2":
             filme_achado = procura_filme(filme,f)
             x = input("digite 1 para adicionar filme aos favoritos ou enter para sair..: ")
             if x == "1":
-                ad_filme_favoritos(filme_achado)
+                ad_filme_lista(filme_achado)
+        elif gerencia == "2":
+            catalogo_lista_favoritos()
+            exclusao = input("digite 1 para excluir um filme da lista de favoritos ou enter para sair..: ")
+            if exclusao == "1":
+                filme_excluido = int(input("qual filme quer excluir da lista? "))
+                exclusao_filmes(filme_excluido)
         elif gerencia == "3":
             print("obrigado por usar nosso programa!")
             break
 else:
-    print("obrigado por usar nosso programa!")     
+    print("obrigado por usar nosso programa!") 
+
+#lista de coisas a fazer:
+# 1-fazer uma função que não permita adicionar filmes a listas que ja o possuam
+# 2-fazer a função de gerenciamento(view da lista de favoritos e exclusão de filmes)
+# 3-criar uma lista de filmes favoritos para cada usuario    
