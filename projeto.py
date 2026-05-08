@@ -25,9 +25,7 @@ def adicionar_usuario(usuario_criado) :
     for i in usuarios:
         arquivo.write(str(i) + "\n")
     arquivo.close()
-
 #--------login------------------------------------------------------------------------------
-
 def checagem_login() :
     email = input("digite seu email..: ")
     senha = input("digite sua senha..: ")
@@ -41,7 +39,6 @@ def checagem_login() :
     return False
 
 #---------filmes----------------------------------------------------------------------------
-
 def catalogo():
     l = []
     arquivo = open("filmes.txt","r")
@@ -51,26 +48,24 @@ def catalogo():
         print(linha)
     arquivo.close()
     return l
-
 def procura_filme(filme,cat):
     if 1 <= filme <= len(cat):
         print(cat[filme - 1])
     else:
         print("filme invalido!")
     return cat[filme - 1]
-
 def criar_filme_favoritos():
     fil = []
     arquivo = open("lista_favoritos.txt","r")
     for i in arquivo.readlines():
-        fil.append(i.strip()) #o strip remove elementos invisiveis do texto, como espaços em branco ou linhas desnecessarias
+        fil.append(i.strip()) 
     arquivo.close()
     return fil
-
 def ad_filme_lista(num_filme,filme_achado,usuario_logado):
     film = carregar_lista_favoritos()
-    for filme in film: #film ja estava sendo transformado em dicionario na outra função, portanto o eval não é necessario aqui
-        if filme['email'] == usuario_logado['email'] and filme['numero'] == num_filme:
+    for filme in film: 
+        if (filme['email'] == usuario_logado['email'] 
+            and filme['numero'] == num_filme):
             print("esse filme ja esta na sua lista!")
             return
     f = {
@@ -100,7 +95,7 @@ def carregar_lista_favoritos():
     l = []
     arquivo = open("lista_favoritos.txt","r")
     for i in arquivo.readlines():
-        l.append(ast.literal_eval(i.strip())) #o ast literal eval transforma as linhas em listas com dicionarios
+        l.append(ast.literal_eval(i.strip()))
     arquivo.close()
     return l
 
@@ -117,7 +112,6 @@ def excluir_filme(filme_excluido):
     print("filme removido da lista de favoritos!")
 
 #-------codigo principal--------------------------------------------------------------------
-
 inicio = input("digite 1 para cadastro, 2 para login ou enter para sair..: ")
 if inicio == "1" or inicio == "2":
     if inicio == "1":
@@ -129,11 +123,9 @@ if inicio == "1" or inicio == "2":
         usuario_logado = checagem_login()
         if usuario_logado:
             break
-        print(pular_linha)
     while True:
         print(pular_linha)
         gerencia = input("digite 1 para pesquisar, 2 para gerenciariamento e 3 para sair..: ")
-        print(pular_linha)
         if gerencia == "1":
             cat = catalogo()
             print(pular_linha)
