@@ -1,30 +1,30 @@
-1. the godfather (o poderoso chefao), crime/drama, 1972
-2. titanic (titanic), romance/drama, 1997
-3. the dark knight (o cavaleiro das trevas), acao/crime, 2008
-4. pulp fiction (pulp fiction: tempo de violencia), crime/drama, 1994
-5. forrest gump (forrest gump: o contador de historias), drama/romance, 1994
-6. inception (a origem), ficcao cientifica/acao, 2010
-7. the matrix (matrix), ficcao cientifica/acao, 1999
-8. gladiator (gladiador), acao/drama, 2000
-9. the shawshank redemption (um sonho de liberdade), drama, 1994
-10. jurassic park (jurassic park: o parque dos dinossauros), aventura/ficcao cientifica, 1993
-11. avatar (avatar), ficcao cientifica/aventura, 2009
-12. avengers: endgame (vingadores: ultimato), acao/super-heroi, 2019
-13. interstellar (interestelar), ficcao cientifica/drama, 2014
-14. the lion king (o rei leao), animacao/aventura, 1994
-15. star wars (guerra nas estrelas), ficcao cientifica/aventura, 1977
-16. the silence of the lambs (o silencio dos inocentes), suspense/crime, 1991
-17. saving private ryan (o resgate do soldado ryan), guerra/drama, 1998
-18. the green mile (a espera de um milagre), drama/fantasia, 1999
-19. fight club (clube da luta), drama, 1999
-20. the lord of the rings: the fellowship of the ring (o senhor dos aneis: a sociedade do anel), fantasia/aventura, 2001
-21. the lord of the rings: the return of the king (o senhor dos aneis: o retorno do rei), fantasia/aventura, 2003
-22. harry potter and the sorcerer's stone (harry potter e a pedra filosofal), fantasia/aventura, 2001
-23. back to the future (de volta para o futuro), ficcao cientifica/comedia, 1985
-24. the terminator (o exterminador do futuro), ficcao cientifica/acao, 1984
-25. rocky (rocky: um lutador), drama/esporte, 1976
-26. jaws (tubarao), suspense/aventura, 1975
-27. the exorcist (o exorcista), terror, 1973
-28. toy story (toy story), animacao/comedia, 1995
-29. frozen (frozen: uma aventura congelante), animacao/musical, 2013
-30. parasite (parasita), drama/suspense, 2019
+1. (o poderoso chefao), crime/drama, 1972
+2. (titanic), romance/drama, 1997
+3. (o cavaleiro das trevas), acao/crime, 2008
+4. (pulp fiction: tempo de violencia), crime/drama, 1994
+5. (forrest gump: o contador de historias), drama/romance, 1994
+6. (a origem), ficcao cientifica/acao, 2010
+7. (matrix), ficcao cientifica/acao, 1999
+8. (gladiador), acao/drama, 2000
+9. (um sonho de liberdade), drama, 1994
+10. (jurassic park: o parque dos dinossauros), aventura/ficcao cientifica, 1993
+11. (avatar), ficcao cientifica/aventura, 2009
+12. (vingadores: ultimato), acao/super-heroi, 2019
+13. (interestelar), ficcao cientifica/drama, 2014
+14. (o rei leao), animacao/aventura, 1994
+15. (guerra nas estrelas), ficcao cientifica/aventura, 1977
+16. (o silencio dos inocentes), suspense/crime, 1991
+17. (o resgate do soldado ryan), guerra/drama, 1998
+18. (a espera de um milagre), drama/fantasia, 1999
+19. (clube da luta), drama, 1999
+20. (o senhor dos aneis: a sociedade do anel), fantasia/aventura, 2001
+21. (o senhor dos aneis: o retorno do rei), fantasia/aventura, 2003
+22. (harry potter e a pedra filosofal), fantasia/aventura, 2001
+23. (de volta para o futuro), ficcao cientifica/comedia, 1985
+24. (o exterminador do futuro), ficcao cientifica/acao, 1984
+25. (rocky: um lutador), drama/esporte, 1976
+26. (tubarao), suspense/aventura, 1975
+27. (o exorcista), terror, 1973
+28. (toy story), animacao/comedia, 1995
+29. (frozen: uma aventura congelante), animacao/musical, 2013
+30. (parasita), drama/suspense, 2019
