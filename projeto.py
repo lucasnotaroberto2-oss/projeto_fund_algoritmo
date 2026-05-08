@@ -15,6 +15,7 @@ def criar_lista_usuarios() :
     arquivo = open("usuarios.txt","r")
     for i in arquivo.readlines():
         usu.append(i)
+    arquivo.close()
     return usu
 
 def adicionar_usuario(usuario_criado) :
@@ -68,9 +69,8 @@ def criar_filme_favoritos():
 
 def ad_filme_lista(num_filme,filme_achado,usuario_logado):
     film = carregar_lista_favoritos()
-    for filme in film:
-        filme_dict = ast.literal_eval(filme)
-        if filme_dict['email'] == usuario_logado['email'] and filme_dict['numero'] == num_filme:
+    for filme in film: #film ja estava sendo transformado em dicionario na outra função, portanto o eval não é necessario aqui
+        if filme['email'] == usuario_logado['email'] and filme['numero'] == num_filme:
             print("esse filme ja esta na sua lista!")
             return
     f = {
@@ -146,7 +146,7 @@ if inicio == "1" or inicio == "2":
             if x == "1":
                 ad_filme_lista(num_filme,filme_achado,usuario_logado)
         elif gerencia == "2":
-            catalogo_lista_favoritos()
+            catalogo_lista_favoritos(usuario_logado)
             print(pular_linha)
             exclusao = input("digite 1 para excluir um filme da lista de favoritos ou enter para sair..: ")
             print(pular_linha)
@@ -162,6 +162,3 @@ if inicio == "1" or inicio == "2":
 else:
     print(pular_linha)
     print("obrigado por usar nosso programa!")    
-
-#lista de coisas a fazer:
-# 1 - resolver o bug de adicionar filme aos favoritos
